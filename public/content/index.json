@@ -1,0 +1,14 @@
+[
+  {
+    "id": "welcome",
+    "title": "Welcome",
+    "description": "이 저장소에서 문서를 추가하고 GitHub Pages로 배포하는 시작 문서",
+    "file": "welcome.md"
+  },
+  {
+    "id": "pages-guide",
+    "title": "GitHub Pages Guide",
+    "description": "프로젝트 페이지 배포와 문서 추가 위치를 정리한 메모",
+    "file": "github-pages-guide.md"
+  }
+]
