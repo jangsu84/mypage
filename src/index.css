@@ -1,8 +1,9 @@
 :root {
-  color: #161616;
+  color: #f3f3f3;
   background:
-    radial-gradient(circle at top left, rgba(255, 217, 102, 0.35), transparent 30%),
-    linear-gradient(180deg, #fff7eb 0%, #f4efe6 48%, #efe8dc 100%);
+    radial-gradient(circle at 85% -10%, rgba(201, 49, 70, 0.22), transparent 32%),
+    radial-gradient(circle at -10% 35%, rgba(62, 72, 106, 0.35), transparent 35%),
+    linear-gradient(180deg, #0b0f19 0%, #101726 48%, #0d1422 100%);
   font-family: "IBM Plex Sans KR", "Pretendard", sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -35,11 +36,11 @@ code {
 
 .hero {
   padding: 32px;
-  border: 1px solid rgba(22, 22, 22, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 28px;
-  background: rgba(255, 252, 246, 0.8);
+  background: linear-gradient(135deg, rgba(25, 32, 47, 0.95), rgba(12, 16, 26, 0.92));
   backdrop-filter: blur(16px);
-  box-shadow: 0 20px 60px rgba(89, 61, 24, 0.08);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.42);
 }
 
 .eyebrow,
@@ -48,7 +49,7 @@ code {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-size: 0.78rem;
-  color: #8d5c20;
+  color: #ff4e63;
 }
 
 .hero h1,
@@ -68,7 +69,7 @@ code {
 .hero-copy {
   max-width: 60ch;
   margin: 18px 0 0;
-  color: #53483c;
+  color: #b6bcc8;
   font-size: 1.05rem;
 }
 
@@ -81,10 +82,10 @@ code {
 
 .sidebar,
 .viewer {
-  border: 1px solid rgba(22, 22, 22, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 28px;
-  background: rgba(255, 252, 246, 0.78);
-  box-shadow: 0 20px 60px rgba(89, 61, 24, 0.08);
+  background: linear-gradient(160deg, rgba(20, 28, 42, 0.95), rgba(10, 14, 22, 0.94));
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.4);
 }
 
 .sidebar {
@@ -101,14 +102,15 @@ code {
 
 .sidebar-header span,
 .viewer-header code {
-  color: #6b6258;
+  color: #9fa7b5;
   font-size: 0.9rem;
 }
 
 .viewer-header code {
   padding: 8px 12px;
   border-radius: 999px;
-  background: #f2eadf;
+  background: rgba(255, 78, 99, 0.14);
+  color: #ffd7dd;
 }
 
 .document-list {
@@ -123,23 +125,24 @@ code {
   width: 100%;
   text-align: left;
   padding: 14px 16px;
-  border: 1px solid rgba(22, 22, 22, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: 18px;
-  background: #fffdfa;
-  color: inherit;
+  background: rgba(22, 30, 44, 0.8);
+  color: #e8ebf2;
   cursor: pointer;
   transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
 }
 
 .document-link:hover {
   transform: translateY(-1px);
-  border-color: rgba(141, 92, 32, 0.4);
+  border-color: rgba(255, 78, 99, 0.55);
+  background: rgba(30, 40, 58, 0.92);
 }
 
 .document-link.active {
-  background: #1f1a14;
-  color: #fff4e0;
-  border-color: #1f1a14;
+  background: linear-gradient(130deg, #ff4655, #bc3347);
+  color: #ffffff;
+  border-color: #ff6f7c;
 }
 
 .document-link strong,
@@ -151,12 +154,12 @@ code {
 .sidebar-empty,
 .viewer-state {
   margin-top: 6px;
-  color: #6b6258;
+  color: #98a1af;
   font-size: 0.95rem;
 }
 
 .document-link.active span {
-  color: #d8c9ad;
+  color: #ffe9ec;
 }
 
 .viewer {
@@ -164,13 +167,13 @@ code {
 }
 
 .viewer-state.error {
-  color: #9a2f19;
+  color: #ff7383;
 }
 
 .markdown-body {
   margin-top: 24px;
   padding-top: 20px;
-  border-top: 1px solid rgba(22, 22, 22, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
 }
 
 .markdown-body h1,
@@ -189,14 +192,16 @@ code {
   overflow-x: auto;
   padding: 16px;
   border-radius: 16px;
-  background: #1f1a14;
-  color: #fff4e0;
+  background: #080b13;
+  color: #eef0f6;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .markdown-body :not(pre) > code {
   padding: 2px 6px;
   border-radius: 6px;
-  background: #f2eadf;
+  background: rgba(255, 78, 99, 0.15);
+  color: #ffdfe4;
 }
 
 .markdown-body table {
@@ -207,7 +212,7 @@ code {
 .markdown-body th,
 .markdown-body td {
   padding: 10px 12px;
-  border: 1px solid rgba(22, 22, 22, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.11);
   text-align: left;
 }
 
