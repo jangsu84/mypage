@@ -96,7 +96,7 @@ function App() {
     <div className="app-shell">
       <header className="hero">
         <p className="eyebrow">JANGSU KIHM · DATABASE ENGINEER</p>
-        <h1>Engineer Notes</h1>
+        <h1>DB Engineer Notes</h1>
         <p className="hero-copy">
           Notes from my daily work, shared for anyone interested. 
         </p>

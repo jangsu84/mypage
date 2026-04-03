@@ -1,10 +1,6 @@
 # mypage
 
-React와 Markdown 뷰어로 구성한 GitHub Pages 프로젝트 페이지입니다.
-
-배포 주소:
-
-- `https://jangsu84.github.io/mypage/`
+A React + Markdown viewer project configured for GitHub Pages.
 
 ## Stack
 
@@ -42,28 +38,28 @@ npm run build
 
 ## Add Markdown Documents
 
-1. `public/content/` 아래에 `.md` 파일을 추가합니다.
-2. `public/content/index.json` 에 문서 항목을 등록합니다.
-3. 앱에서 목록을 클릭하면 같은 페이지에서 문서 본문이 렌더링됩니다.
+1. Add a `.md` file under `public/content/`.
+2. Register the document in `public/content/index.json`.
+3. Click an item in the app to render the markdown content.
 
-예시:
+Example:
 
 ```json
 [
-	{
-		"id": "welcome",
-		"title": "Welcome",
-		"description": "시작 문서",
-		"file": "welcome.md"
-	}
+  {
+    "id": "welcome",
+    "title": "Welcome",
+    "description": "Getting started document",
+    "file": "welcome.md"
+  }
 ]
 ```
 
 ## GitHub Pages
 
-이 저장소는 프로젝트 페이지로 배포됩니다.
+This repository is deployed as a project page.
 
-- Vite base 설정: `/mypage/`
-- 워크플로 파일: `.github/workflows/deploy.yml`
+- Vite base setting: `/mypage/`
+- Workflow file: `.github/workflows/deploy.yml`
 
-GitHub 저장소 설정에서 Pages source를 `GitHub Actions` 로 맞추면 `main` 브랜치 푸시 시 자동 배포됩니다.
+Set the Pages source to `GitHub Actions` in repository settings to enable automatic deployment from pushes to `main`.
