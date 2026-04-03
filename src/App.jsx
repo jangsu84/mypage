@@ -19,7 +19,7 @@ function App() {
         const response = await fetch(`${CONTENT_BASE}index.json`)
 
         if (!response.ok) {
-          throw new Error('문서 목록을 불러오지 못했습니다.')
+          throw new Error('Failed to load document list.')
         }
 
         const items = await response.json()
@@ -65,7 +65,7 @@ function App() {
         const response = await fetch(`${CONTENT_BASE}${currentDocument.file}`)
 
         if (!response.ok) {
-          throw new Error('문서를 불러오지 못했습니다.')
+          throw new Error('Failed to load document.')
         }
 
         const markdown = await response.text()
@@ -95,22 +95,22 @@ function App() {
   return (
     <div className="app-shell">
       <header className="hero">
-        <p className="eyebrow">GitHub Pages Markdown Viewer</p>
-        <h1>문서를 정리하고 바로 배포하는 React 페이지</h1>
+        <p className="eyebrow">JANGSU KIHM · DATABASE ENGINEER</p>
+        <h1>Engineer Notes</h1>
         <p className="hero-copy">
-          마크다운 파일은 public/content 아래에 두고, 이 페이지에서 목록과 본문을 한 번에 확인합니다.
+          Notes from my daily work, shared for anyone interested. 
         </p>
       </header>
 
       <main className="workspace">
-        <aside className="sidebar" aria-label="문서 목록">
+        <aside className="sidebar" aria-label="Document list">
           <div className="sidebar-header">
             <h2>Documents</h2>
             <span>{documents.length} files</span>
           </div>
 
           {documents.length === 0 && status !== 'error' ? (
-            <p className="sidebar-empty">표시할 문서가 없습니다.</p>
+            <p className="sidebar-empty">No documents available.</p>
           ) : null}
 
           <ul className="document-list">
@@ -133,19 +133,19 @@ function App() {
           <div className="viewer-header">
             <div>
               <p className="viewer-label">Selected document</p>
-              <h2>{selectedDocument?.title ?? '문서를 선택하세요'}</h2>
+              <h2>{selectedDocument?.title ?? 'Select a document'}</h2>
             </div>
             <code>{selectedDocument?.file ?? 'public/content/*.md'}</code>
           </div>
 
           {status === 'loading-list' || status === 'loading-content' ? (
-            <p className="viewer-state">문서를 불러오는 중입니다...</p>
+            <p className="viewer-state">Loading documents...</p>
           ) : null}
 
           {status === 'error' ? <p className="viewer-state error">{error}</p> : null}
 
           {status === 'empty' ? (
-            <p className="viewer-state">public/content 에 마크다운 파일을 추가해 보세요.</p>
+            <p className="viewer-state">Add markdown files to public/content.</p>
           ) : null}
 
           {status === 'idle' && content ? (
